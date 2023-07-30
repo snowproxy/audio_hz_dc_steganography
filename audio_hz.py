@@ -4,7 +4,7 @@ from scipy.fft import fft
 from pydub import AudioSegment
 import base64
 
-char_to_hz = {char: i*400 for i, char in enumerate(' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/.,;:!?"()-\'')}
+char_to_hz = {char: i*400 for i, char in enumerate(''' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/.,;:!?"()-\'@#£&_-()=%*':/!?+"$~[]{}<>^`;÷|''')}
 hz_to_char = {i: char for char, i in char_to_hz.items()}
 
 def text_to_audio(text, filename):
